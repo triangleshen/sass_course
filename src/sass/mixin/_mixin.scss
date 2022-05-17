@@ -1,0 +1,138 @@
+//函數
+//$minheight 區域變數
+@mixin center($minheight:null) {
+    margin-left: auto;
+    margin-right: auto;
+    min-height: $minheight;
+}
+
+@mixin layout($width , $bgcc : null) {
+    @if($width == 100){
+        width: 100%;
+    }@else{
+        max-width: $width + px;
+        width: 100%;
+        //引用其他函數
+        @include center();
+    }
+    background-color: $bgcc;
+}
+
+.center{
+    @include center(200px)
+}
+
+.somewhere{
+    width: 1200px;
+    @include center(100px)
+}
+
+.w100{
+    @include layout(100 ,pink);
+    min-height: 300px;
+}
+.w1200{
+    @include layout(1200,orange);
+    min-height: 300px;
+}
+
+
+//組件化運用
+@mixin btn($btn_bg , $width) {
+    color: #fff;
+    text-align: center;
+    background-color: $btn_bg;
+    max-width: $width;
+    width: 100%;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: .4s all ease;
+
+    &:hover{
+        background-color: darken($btn_bg ,20);
+    }
+}
+
+.btn{
+    @include center;
+    @include btn(pink, 500px);
+}
+
+.btn_large{
+    @include center;
+    @include btn(pink, 1000px);
+}
+.btn_small{
+    @include center;
+    @include btn(pink, 100px);
+}
+
+//屬性轉型
+//一般變數用在值
+//若要用在class、屬性、url上要轉過
+@mixin font($font,$abc,$folder) {
+    .font#{$font}{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: $font + px;
+        #{$abc}: 10px;
+        background-image: url('../#{$folder}/aa.jpg');
+    }
+}
+
+
+@include font(30, padding, images);
+
+
+//動態擴增
+@mixin btn2($style, $btn_bg , $width) {
+    .btn_#{$style}{
+        color: #fff;
+        text-align: center;
+        background-color: $btn_bg;
+        max-width: $width;
+        width: 100%;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: .4s all ease;
+        @content;
+
+        &:hover{
+            background-color: darken($btn_bg ,20);
+        }
+    }
+}
+
+// @include btn2(pink,pink, 100px){
+//     border: 1px solid red;
+// }
+
+
+//for迴圈
+@for $i from 1 through 5{
+    .push_#{$i}{
+        position: relative;
+        left: ($i * 10) + px;
+    }
+}
+
+@mixin pull($num, $dir) {
+    @for $j from 1 to $num {
+        .pull_#{$dir}_#{$j}{
+            position: relative;
+            #{$dir}: $j * 1px;
+        }
+    }
+}
+
+
+@include pull(4, right);
+
+
+//grid
+
+@for $i from 1 through 12{
+    .col-#{$i}{
+        flex: 0 0 auto;
+        // width: ($i/12) * 100% ;
+    }
+}

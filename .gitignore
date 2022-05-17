@@ -1,0 +1,4 @@
+# 要排除版控的資料夾
+node_modules
+dist
+package-lock.json

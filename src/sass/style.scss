@@ -1,0 +1,114 @@
+/*css註解會被寫出來 */
+//sass註解不會
+
+//排版格式化：alt+shift+f
+
+//同步方式
+//$ sass sass/style.scss css/style.css
+//即時同步
+// sass sass/style.scss css/style.css --watch
+
+
+//@import '資料夾/var';
+//同樣是scss檔不用寫副檔名
+@import 'var';
+@import 'mixin/mixin';
+
+
+//input套件
+// @import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+body{
+    background: $bgc;
+    color: $H1color;
+    padding: null; //空值代表刪除
+    border-color: map-get($map, 'red');
+    $a : 10px; //變數宣告在括弧裡面會變成區域變數，外面不能用
+}
+
+a{
+    // font-size: $a; //這行會出錯
+}
+
+//槽狀寫法
+.wrapper{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    .title{
+        display: inline-block;
+        h1{
+            font-size: 30px;
+        }
+    }
+    span{
+        font-size: 20px;
+    }
+}
+
+//偽元素
+a{
+    color: #333;
+    &:hover{
+        color: #f20;
+    }
+    &::before{
+        content: '';
+    }
+};
+
+
+///////////////////
+//每頁特殊設定寫法
+@import 'layout/header';
+@import 'page/index';
+@import 'page/about';
+
+
+@each $key , $val in $title{
+    #{$key}{
+        font-size: $val;
+    }
+};
+
+
+///////////////////RWD///////////////////
+
+@mixin l(){
+    @media all and(max-width:$l_breakpoint){
+        @content
+    };
+};
+
+@mixin m(){
+    @media all and(max-width:$m_breakpoint){
+        @content
+    }
+};
+
+.rwdTest{
+    color: #642f64;
+    font-size: 100px;
+
+    @include l(){
+        color:#f20;
+    }
+
+    @include m(){
+        color:blue;
+    }
+}
+
+
+///////////////////each///////////////////
+
+//把$map裡的屬性與數值用each轉成class
+@each $key, $val in $map {
+    .#{$key}{
+        color:$val;
+    }
+}
+
+
+
+@import 'page/header';

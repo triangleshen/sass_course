@@ -1,0 +1,21 @@
+// sass變數是$
+$bgc : #eee;
+$H1color : #333;
+$margin: 10px auto;
+
+
+//map型態
+$map:(
+    'red':#f20,
+    'black':#333
+);
+
+$title : (
+    "h1":40px,
+    "h2":30px,
+    "h3":28px,
+    "h4":20px
+);
+
+$m_breakpoint: 576px;
+$l_breakpoint: 996px;

@@ -1,0 +1,119 @@
+
+/*---------- about ----------*/
+.about{
+    h2{
+        font-size: 30px;
+    }
+}
+
+/* sass運算 */
+.box{
+    //單位不同不能相加
+    width: 10 + 300px;
+    height: 10 - 100px;
+    margin: 5 * 5px;
+     //除法要加括號不然會看不懂
+    //單位要放外面不然會除不見
+    // font-size: (500 / 10) + px;
+}
+
+/* sass函數 */
+.test1{
+    //無條件捨去
+    width: floor(14.3) + px;
+    //無條件進位
+    height: ceil(15 + 3.3333) + px;
+    //四捨五入
+    font-size: round(3.3) + px;
+}
+
+
+/* sass顏色函數 */
+//要裝套件才有
+.color{
+    color: lighten(#720000,40);
+    background-color: darken(#569000, 20);
+}
+
+//運用
+$a_color : #e30;
+
+.a{
+    color : $a_color;
+    font-size: 30px;
+    transition: .4s all ease;
+    &:hover{
+        color: lighten($a_color, 20);
+        font-size: 45px;
+    }
+}
+
+$btn_color : #0d69b4;
+button{
+    padding: 10px;
+    background-color: $btn_color;
+    color: #fff;
+    border: none;
+    font-size: 30px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: .4s all ease;
+    &:hover{
+        background-color: lighten($btn_color, 20);
+        cursor: pointer;
+    }
+}
+
+/*---------- 函數運算h1~h5 ----------*/
+
+$body_font: 10px;
+
+h1{font-size: round($body_font * 4.5);}
+h2{font-size: round($body_font * 4);}
+h3{font-size: round($body_font * 3.5);}
+h4{font-size: round($body_font * 2.6);}
+h5{font-size: round($body_font * 1.5);}
+
+
+/*---------- 判斷式 ----------*/
+$con : true;
+$fcon: false;
+
+.if{
+    @if($con){
+        width: 100px;
+    }@else{
+        width: inherit;
+    }
+}
+
+.if2{
+    @if($fcon){
+        width: 100px;
+    }@else{
+        width: inherit;
+    }
+}
+
+/*---------- each ----------*/
+
+$list: a1 a2 a3 banner;
+
+@mixin img ($list, $w:100%){
+    @each $a in $list{
+        .img_#{$a}{
+            background-image: url('../images/#{$a}.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            object-fit: cover;
+            @content;
+        }
+    }
+}
+
+@include img(a1 banner, 80%);
+@include img(a2, 80%);
+@include img(a3, 80%);
+@include img(f1, 80%){
+    height: 500px;
+};

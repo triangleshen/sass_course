@@ -1,0 +1,442 @@
+@charset "UTF-8";
+/*css註解會被寫出來 */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 200px;
+}
+
+.somewhere {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100px;
+}
+
+.w100 {
+  width: 100%;
+  background-color: pink;
+  min-height: 300px;
+}
+
+.w1200 {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: orange;
+  min-height: 300px;
+}
+
+.btn {
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+  background-color: pink;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-transition: .4s all ease;
+  transition: .4s all ease;
+}
+
+.btn:hover {
+  background-color: #ff5a77;
+}
+
+.btn_large {
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+  background-color: pink;
+  max-width: 1000px;
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-transition: .4s all ease;
+  transition: .4s all ease;
+}
+
+.btn_large:hover {
+  background-color: #ff5a77;
+}
+
+.btn_small {
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+  background-color: pink;
+  max-width: 100px;
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-transition: .4s all ease;
+  transition: .4s all ease;
+}
+
+.btn_small:hover {
+  background-color: #ff5a77;
+}
+
+.font30 {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  padding: 10px;
+  background-image: url("../images/aa.jpg");
+}
+
+.btn_pink {
+  color: #fff;
+  text-align: center;
+  background-color: pink;
+  max-width: 100px;
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  -webkit-transition: .4s all ease;
+  transition: .4s all ease;
+  border: 1px solid red;
+}
+
+.btn_pink:hover {
+  background-color: #ff5a77;
+}
+
+.push_1 {
+  position: relative;
+  left: 10px;
+}
+
+.push_2 {
+  position: relative;
+  left: 20px;
+}
+
+.push_3 {
+  position: relative;
+  left: 30px;
+}
+
+.push_4 {
+  position: relative;
+  left: 40px;
+}
+
+.push_5 {
+  position: relative;
+  left: 50px;
+}
+
+.pull_right_1 {
+  position: relative;
+  right: 1px;
+}
+
+.pull_right_2 {
+  position: relative;
+  right: 2px;
+}
+
+.pull_right_3 {
+  position: relative;
+  right: 3px;
+}
+
+.col-1 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 8.33333%;
+}
+
+.col-2 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 16.66667%;
+}
+
+.col-3 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 25%;
+}
+
+.col-4 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 33.33333%;
+}
+
+.col-5 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 41.66667%;
+}
+
+.col-6 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 50%;
+}
+
+.col-7 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 58.33333%;
+}
+
+.col-8 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 66.66667%;
+}
+
+.col-9 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 75%;
+}
+
+.col-10 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 83.33333%;
+}
+
+.col-11 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 91.66667%;
+}
+
+.col-12 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 100%;
+}
+
+body {
+  background: #eee;
+  color: #333;
+  padding: null;
+  border-color: #f20;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.wrapper .title {
+  display: inline-block;
+}
+
+.wrapper .title h1 {
+  font-size: 30px;
+}
+
+.wrapper span {
+  font-size: 20px;
+}
+
+a {
+  color: #333;
+}
+
+a:hover {
+  color: #f20;
+}
+
+a::before {
+  content: '';
+}
+
+/*---------- index ----------*/
+.index h1 {
+  font-size: 50px;
+}
+
+/*---------- about ----------*/
+.about h2 {
+  font-size: 30px;
+}
+
+/* sass運算 */
+.box {
+  width: 310px;
+  height: -90px;
+  margin: 25px;
+  font-size: 50px;
+}
+
+/* sass函數 */
+.test1 {
+  width: 14px;
+  height: 19px;
+  font-size: 3px;
+}
+
+/* sass顏色函數 */
+.color {
+  color: #ff3f3f;
+  background-color: #192a00;
+}
+
+.a {
+  color: #e30;
+  font-size: 30px;
+  -webkit-transition: .4s all ease;
+  transition: .4s all ease;
+}
+
+.a:hover {
+  color: #ff7955;
+  font-size: 45px;
+}
+
+button {
+  padding: 10px;
+  background-color: #0d69b4;
+  color: #fff;
+  border: none;
+  font-size: 30px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  -webkit-transition: .4s all ease;
+  transition: .4s all ease;
+}
+
+button:hover {
+  background-color: #369df1;
+  cursor: pointer;
+}
+
+/*---------- 函數運算h1~h5 ----------*/
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+h4 {
+  font-size: 26px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+/*---------- 判斷式 ----------*/
+.if {
+  width: 100px;
+}
+
+.if2 {
+  width: inherit;
+}
+
+/*---------- each ----------*/
+.img_a1 {
+  background-image: url("../images/a1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_banner {
+  background-image: url("../images/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_a2 {
+  background-image: url("../images/a2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_a3 {
+  background-image: url("../images/a3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img_f1 {
+  background-image: url("../images/f1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 500px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+.rwdTest {
+  color: #642f64;
+  font-size: 100px;
+}
+
+@media all and (max-width: 996px) {
+  .rwdTest {
+    color: #f20;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .rwdTest {
+    color: yellow;
+  }
+}
+
+.red {
+  color: #f20;
+}
+
+.black {
+  color: #333;
+}
+/*# sourceMappingURL=style.css.map */

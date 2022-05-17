@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 用gulp-file-include不可以隨便打空白鍵 -->
+    @@include('layout/meta.html',{
+        // meta.html裡設的變數 : 值
+        "title":"首頁",
+    })
+</head>
+<body>
+    <!-- 引入header.html -->
+    @@include('layout/header.html')
+
+    <div class="wrapper index">
+        <div class="title">
+            <h1>aaa</h1>
+        </div>
+    </div>
+    <button>aaaaa</button>
+
+    <div class="w100"></div>
+    <div class="w1200"></div>
+
+    <!-- <div class="btn mv">aaaa</div> -->
+    <!-- <div class="btn_large mv">aaaa</div> -->
+    <div class="btn_small push_40 mv">aaaa</div>
+
+    <div class="rwdTest">abc</div>
+    <!-- <script>
+        gsap.to(".mv", {
+            rotation: 27, 
+            x: 100, 
+            duration: 1,
+            yoyo: true
+        });
+    </script> -->
+
+    @@include('layout/footer.html')
+</body>
+</html>
